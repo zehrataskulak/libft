@@ -1,3 +1,5 @@
+#include "libft.h"
+
 char *ft_strrchr(const char *str, int c)
 {
     int size;
@@ -14,6 +16,6 @@ char *ft_strrchr(const char *str, int c)
             return ((char *)&str[size]);
         size--;
     }
-    return (0);
+    return (NULL);
 }
 // son gorulen eslesmeyi bulmak icin string i sondan tarayarak ilerlemeyi tercih ettim.

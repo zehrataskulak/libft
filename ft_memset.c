@@ -1,4 +1,5 @@
-// fonksiyon orjinali size_t n tipi kullanmış ama kütüphane eklemeden burda kullanamyız.
+#include "libft.h"
+
 void *ft_memset(void *dest, int  value, size_t n)
 {
     int    i;

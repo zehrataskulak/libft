@@ -1,3 +1,5 @@
+#include "libft.h"
+
 char *ft_strchr(const char *str, size_t c)
 {
     int i;
@@ -11,5 +13,5 @@ char *ft_strchr(const char *str, size_t c)
     }
     if (c == '\0')
         return ((char *)&str[i]);
-    return (0);
+    return (NULL);
 }
