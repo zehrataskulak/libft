@@ -2,7 +2,6 @@
 #define LIBFT_H
 
 #include <stddef.h>
-#include <stddef.h>
 
 int	ft_atoi(const char *str);
 void ft_bzero(void *p, int n);
