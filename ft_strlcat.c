@@ -2,9 +2,9 @@
 
 size_t strlcat(char *dest, const char *src, size_t size)
 {
-    int i;
-    int srcln;
-    int dstln;
+    size_t i;
+    size_t srcln;
+    size_t dstln;
 
     i = 0;
     srcln = 0;
