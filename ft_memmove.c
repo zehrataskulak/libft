@@ -2,22 +2,22 @@
 
 void *ft_memmove(void *dest, const void *src, size_t n)
 {
-    int i;
     unsigned char *d;
-    unsigned char *s;
+    const unsigned char *s;
 
     d = (unsigned char *)dest;
-    s = (unsigned const char *)src;
-    i = 0;
-    if (d < s)
+    s = (const unsigned char *)src;
+    if (d > s)
     {
-        while (i < n)
+        while (n > 0)
         {
-            d[i] = s[i];
-            i++;
+            n--;
+            d[n] = s[n];
         }
-        
     }
-    else if (d > s)
+    else
+    {
+        ft_memcpy(dest, src, n);
+    }
+    return (dest);
 }
-// dest ve src nin bellek bölgelerinin çakıçmasını onler.
