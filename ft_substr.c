@@ -6,8 +6,16 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
     char *arr;
 
     i = 0;
-    if (start > ft_strlen(arr))
-        return (NULL);
+    if (start > ft_strlen(s))
+    {
+        //start string dışında başlatılırsa fonksiyon tanımsız davranmamalıdır.
+        //NULL dondurseydi se fault
+       arr = malloc(1);
+        if (arr == NULL)
+            return (NULL);
+        arr[0] = '\0'; //eskiden kullanılan bellek degeri gelebilir, omlemek icin.
+        return (arr);
+    }
     arr = malloc(len + 1);
     if (arr == NULL)
         return (NULL);
