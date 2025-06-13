@@ -50,7 +50,7 @@ char *ft_itoa(int n)
         if (num == NULL)
             return (NULL);
         return ("-2147483648");*/
-        return (ft_strdup("-2147483648"));
+        return ("-2147483648");
     }
     isngtv = 0;
     num = malloc (ft_digit(n) + 1);
@@ -67,13 +67,13 @@ char *ft_itoa(int n)
     return (num);
 }
 
-/*
+
 #include <stdio.h>
 
 int main()
 {
-   // int i = 1;
-   // int n = 6;
+    int i = 1;
+    int n = 6;
     if (n < 0)
         i++;
     while (n > 9 || n < -9)
@@ -81,6 +81,6 @@ int main()
         n /= 10;
         i++;
     }
-   // printf("%d\n", ft_digit(n));
+   printf("%d\n", ft_digit(n));
    printf ("%s\n", ft_itoa(-2147483648));
-} */
+} 

@@ -2,11 +2,22 @@
 
 void ft_lstadd_back(t_list **lst, t_list *new)
 {
-	(*lst) -> next = new;
+    t_list *mv;
 
+    mv = *lst;
+	if (!*lst)
+        (*lst) = new;
+    else
+    {
+        while (mv -> next != NULL)
+        {
+            mv = mv -> next;
+        }
+        mv -> next = new;
+    }
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 
 int main ()
 {
@@ -30,4 +41,4 @@ int main ()
         printf("%d\n", *(int *)(mv -> content));
         mv = mv -> next;
     }
-} 
+} */
