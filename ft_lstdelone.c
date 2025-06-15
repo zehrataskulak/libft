@@ -1,9 +1,9 @@
 #include "libft.h"
 
-  void	del(void *a)
+  /*void	del(void *a)
 {
 	free(a);
-}
+}*/
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
@@ -13,7 +13,7 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 	free(lst);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 
 int main ()
 {
@@ -43,7 +43,7 @@ int main ()
         printf("%d\n", *(int *)(mv -> content));
         mv = mv -> next;
     }
-} 
+} */
 
 
 
