@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zzehra <zzehra@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/06/18 21:16:11 by zzehra            #+#    #+#             */
+/*   Updated: 2025/06/18 22:15:28 by zzehra           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static int ft_arrlng(const char *s, char c)
@@ -93,7 +105,7 @@ static char **ft_freeall(char **arr, int i)
     return (NULL);
 }
 
-static char **ft_split(const char *s, char c)
+char **ft_split(const char *s, char c)
 {
     int i; 
     char **arr;
@@ -119,7 +131,7 @@ static char **ft_split(const char *s, char c)
 }
 
 
-#include <stdio.h>
+/*#include <stdio.h>
 
 int main()
 {
@@ -134,4 +146,4 @@ int main()
    {
         printf("%s\n", arr[i]);
    } 
-}
+}*/

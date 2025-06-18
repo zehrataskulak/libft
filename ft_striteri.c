@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zzehra <zzehra@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/06/18 21:16:24 by zzehra            #+#    #+#             */
+/*   Updated: 2025/06/18 22:17:08 by zzehra           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 void ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
     unsigned int i;
@@ -10,7 +22,7 @@ void ft_striteri(char *s, void (*f)(unsigned int, char*))
     }
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 
 void ft_f(unsigned int i, char *c)
 {
@@ -23,4 +35,4 @@ int main()
     char c[] = "zehra";
     ft_striteri(c, ft_f);
     printf ("%s\n", c);
-}
+}*/

@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zzehra <zzehra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/18 21:13:50 by zzehra            #+#    #+#             */
-/*   Updated: 2025/06/18 21:13:51 by zzehra           ###   ########.fr       */
+/*   Created: 2025/06/18 21:35:50 by zzehra            #+#    #+#             */
+/*   Updated: 2025/06/18 21:38:24 by zzehra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_bzero(void *p, int n)
-{
-    unsigned char *ptr;
-    int i;
+#include "libft.h"
 
-    i = 0;
-    ptr = (unsigned char *)p;
-    while (i < n)
-    {
-        ptr[i] = 0;
-        i++;
-    }
+t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+{
+    
 }
