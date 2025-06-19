@@ -6,7 +6,7 @@
 /*   By: zzehra <zzehra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:17:09 by zzehra            #+#    #+#             */
-/*   Updated: 2025/06/18 21:17:10 by zzehra           ###   ########.fr       */
+/*   Updated: 2025/06/19 16:46:36 by zzehra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -140,7 +140,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 
 
-#include <stdio.h>
+/*#include <stdio.h>
 
 int main()
 {
@@ -151,4 +151,4 @@ int main()
     printf ("%s\n", final);
   //  int a = ft_findend(s1, set);
   //  printf("%d\n", a);
-}
+}*/

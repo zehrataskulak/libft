@@ -6,7 +6,7 @@
 /*   By: zzehra <zzehra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:16:07 by zzehra            #+#    #+#             */
-/*   Updated: 2025/06/18 21:16:08 by zzehra           ###   ########.fr       */
+/*   Updated: 2025/06/19 16:47:22 by zzehra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ void ft_putstr_fd(char *s, int fd)
     }
 }
 
-int main ()
+/*int main ()
 {
     ft_putstr_fd("selam zehra bn", 1);
     ft_putstr_fd("\n", 1);
-}
+}*/

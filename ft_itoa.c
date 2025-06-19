@@ -6,7 +6,7 @@
 /*   By: zzehra <zzehra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:14:35 by zzehra            #+#    #+#             */
-/*   Updated: 2025/06/18 21:14:36 by zzehra           ###   ########.fr       */
+/*   Updated: 2025/06/19 16:47:03 by zzehra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ char *ft_itoa(int n)
 }
 
 
-#include <stdio.h>
+/*#include <stdio.h>
 
 int main()
 {
@@ -95,4 +95,4 @@ int main()
     }
    printf("%d\n", ft_digit(n));
    printf ("%s\n", ft_itoa(-2147483648));
-} 
+} */

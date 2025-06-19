@@ -6,7 +6,7 @@
 /*   By: zzehra <zzehra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:16:29 by zzehra            #+#    #+#             */
-/*   Updated: 2025/06/18 21:16:30 by zzehra           ###   ########.fr       */
+/*   Updated: 2025/06/19 16:45:57 by zzehra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char *ft_strjoin(char const *s1, char const *s2)
     return (arr);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 
 int main() 
 {
@@ -45,4 +45,4 @@ int main()
     char *s2 = "zehra huu";
     char *s3 = ft_strjoin(s1, s2);
     printf ("%s\n", s3);
-}
+}*/

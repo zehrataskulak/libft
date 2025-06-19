@@ -20,11 +20,11 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
-bonus:
-	ar rc $(NAME) $(BONUS_OBJ)
+bonus: $(OBJS) $(BONUS_OBJ)
+	ar rcs $(NAME) $(OBJS) $(BONUS_OBJ)
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(BONUS_OBJ)
 
 fclean: clean
 	rm -f $(NAME)

@@ -6,7 +6,7 @@
 /*   By: zzehra <zzehra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:15:59 by zzehra            #+#    #+#             */
-/*   Updated: 2025/06/18 21:16:00 by zzehra           ###   ########.fr       */
+/*   Updated: 2025/06/19 16:47:34 by zzehra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ void ft_putendl_fd(char *s, int fd)
     write (fd, "\n", 1);
 }
 
-int main ()
+/*int main ()
 {
     ft_putendl_fd("selam zehra bn", 1);
     write (1, "n", 1);
-}
+}*/
