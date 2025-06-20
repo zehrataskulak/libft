@@ -6,32 +6,48 @@
 /*   By: zzehra <zzehra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:17:13 by zzehra            #+#    #+#             */
-/*   Updated: 2025/06/18 21:17:14 by zzehra           ###   ########.fr       */
+/*   Updated: 2025/06/21 00:02:02 by zzehra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static size_t ft_get_total(char const *s, unsigned int start, size_t len)
+{
+    size_t i;
+    size_t total;
+
+    i = 0;
+    total = 0;
+    while (s[i + start] && i < len)
+    {
+        total++;
+        i++;
+    }
+    return (total);
+}
+
 char *ft_substr(char const *s, unsigned int start, size_t len)
 {
     size_t i;
     char *arr;
+    size_t total;
 
     i = 0;
     if (start > ft_strlen(s))
     {
-        //start string dışında başlatılırsa fonksiyon tanımsız davranmamalıdır.
-        //NULL dondurseydi se fault
-       arr = malloc(1);
+        arr = malloc(1);
         if (arr == NULL)
             return (NULL);
-        arr[0] = '\0'; //eskiden kullanılan bellek degeri gelebilir, omlemek icin.
+        arr[0] = '\0';
         return (arr);
     }
-    arr = malloc(len + 1);
+    total = ft_get_total(s, start, len); 
+    arr = malloc(total + 1);
     if (arr == NULL)
         return (NULL);
-    while(s[i + start] && i < len)
+    
+    while (s[i + start] && i < len)
     {
         arr[i] = s[i + start];
         i++;
@@ -39,3 +55,48 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
     arr[i] = '\0';
     return (arr);
 }
+
+/*char *ft_substr(char const *s, unsigned int start, size_t len)
+{
+    size_t i;
+    char *arr;
+    size_t total;
+
+    i = 0;
+    total = 0;
+    if (start > ft_strlen(s))
+    {
+       arr = malloc(1);
+        if (arr == NULL)
+            return (NULL);
+        arr[0] = '\0'; //eskiden kullanılan bellek degeri gelebilir, omlemek icin.
+        return (arr);
+    }
+    while (s[i + start] && i < len)
+    {
+        total++;
+        i++;
+    }
+    arr = malloc(total + 1);
+    if (arr == NULL)
+        return (NULL);
+    i = 0;
+    while(s[i + start] && i < len)
+    {
+        arr[i] = s[i + start];
+        i++;
+    }
+    arr[i] = '\0';
+    return (arr);
+}*/
+
+/*#include <stdio.h>
+int main(void)
+{
+    char *s = "merhaba";
+    char *sub = ft_substr(s, 3, 2); // Beklenen çıktı: "ha"
+    
+    printf("Sonuç: %s\n", sub);
+    free(sub);
+    return 0;
+}*/

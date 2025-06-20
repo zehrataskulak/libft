@@ -6,7 +6,7 @@
 /*   By: zzehra <zzehra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:17:26 by zzehra            #+#    #+#             */
-/*   Updated: 2025/06/18 22:23:57 by zzehra           ###   ########.fr       */
+/*   Updated: 2025/06/20 03:16:36 by zzehra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include <unistd.h>
 
 int	ft_atoi(const char *str);
-void ft_bzero(void *p, int n);
+void ft_bzero(void *p, size_t n);
 int ft_isalnum(int  c);
 int ft_isalpha(int  c);
 int ft_isascii(int  c);
@@ -29,7 +29,7 @@ void *ft_memcpy(void *dest, const void *src, size_t n);
 void *ft_memmove(void *dest, const void *src, size_t n);
 void *ft_memset(void *dest, int  value, size_t n);
 char *ft_strchr(const char *str, int c);
-size_t strlcat(char *dest, const char *src, size_t size);
+size_t ft_strlcat(char *dest, const char *src, size_t size);
 size_t ft_strlcpy(char *dest, const char *src, size_t size);
 size_t ft_strlen(const char  *str);
 int ft_strncmp(const char *s1, const char *s2, size_t n);

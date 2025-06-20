@@ -6,7 +6,7 @@
 /*   By: zzehra <zzehra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:16:11 by zzehra            #+#    #+#             */
-/*   Updated: 2025/06/18 22:15:28 by zzehra           ###   ########.fr       */
+/*   Updated: 2025/06/20 22:36:52 by zzehra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int ft_arrlng(const char *s, char c)
     int arrlng;
 
     arrlng = 0;
-    while (*s == c)
+    while (*s && *s == c)
         s++;
     while (*s)
     {
@@ -59,44 +59,6 @@ static char *ft_strncpy(char *dest, const char *src, size_t size)
     return (dest);
 }
 
-/*static const char *ft_chngnarr(const char *s, char **arr, char c, size_t n)
-{
-    size_t i;
-    size_t j;
-
-    i = 0;
-    j = 0;
-    while (s[i] && j < n)
-    {
-        if (s[i] == c)
-        arr[j] = (char *)&s[i];
-        i++;
-    }
-    arr[i] = NULL;
-    return (s + (int)i);
-}
-
-char **ft_split(char const *s, char c)
-{
-    int i;
-    char **arr;
-    
-    i = 0;
-    arr = malloc ((ft_findrow(s, c) + 1) * sizeof(char *));
-    if (arr == NULL)
-        return (NULL);
-    while (i < ft_findrow(s, c))
-    {
-        arr[i++] = malloc (ft_arrlng(s, c) + 1);
-        if (arr[i] == NULL)
-            return (NULL);
-        s = ft_chngnarr(s, arr, c, ft_arrlng(s, c));
-        free(arr[i]);
-    }
-    arr[i] = '\0';
-    return (arr);
-}*/
-
 static char **ft_freeall(char **arr, int i)
 {
     while (i >= 0)
@@ -111,6 +73,8 @@ char **ft_split(const char *s, char c)
     char **arr;
 
     i = 0;
+    if (s == NULL)
+        return (NULL);
     arr = malloc((ft_findrow(s, c) + 1) * sizeof(char *));
     if (!arr) 
         return (NULL);
@@ -118,13 +82,15 @@ char **ft_split(const char *s, char c)
     {
         while (*s == c) 
             s++;
-        arr[i] = malloc(ft_arrlng(s, c) + 1);
-        if (!arr[i])
-            return (ft_freeall(arr, i));
-        ft_strncpy(arr[i], s, ft_arrlng(s, c));
-        arr[i][ft_arrlng(s, c)] = '\0';
-        i++;
-        s += ft_arrlng(s, c);
+        if (*s)
+        {
+            arr[i] = malloc(ft_arrlng(s, c) + 1);
+            if (!arr[i])
+                return (ft_freeall(arr, i - 1));
+            ft_strncpy(arr[i], s, ft_arrlng(s, c));
+            i++;
+            s += ft_arrlng(s, c);
+        }
     }
     arr[i] = NULL;
     return (arr);
@@ -146,4 +112,17 @@ int main()
    {
         printf("%s\n", arr[i]);
    } 
+}*/
+
+/*#include <stdio.h>
+
+int main()
+{
+    char *s = "split  ||this|for|me|||||!|";
+    char **result = ft_split(s, '|');
+    
+    for(int i = 0; i < ft_findrow(s, '|'); i++)
+    {
+        printf("%s\n", result[i]);
+    }
 }*/

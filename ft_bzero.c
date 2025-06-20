@@ -6,14 +6,16 @@
 /*   By: zzehra <zzehra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:13:50 by zzehra            #+#    #+#             */
-/*   Updated: 2025/06/18 21:13:51 by zzehra           ###   ########.fr       */
+/*   Updated: 2025/06/19 21:52:27 by zzehra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_bzero(void *p, int n)
+#include "libft.h"
+
+void ft_bzero(void *p, size_t n)
 {
     unsigned char *ptr;
-    int i;
+    size_t i;
 
     i = 0;
     ptr = (unsigned char *)p;

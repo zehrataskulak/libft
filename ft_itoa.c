@@ -6,7 +6,7 @@
 /*   By: zzehra <zzehra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:14:35 by zzehra            #+#    #+#             */
-/*   Updated: 2025/06/19 16:47:03 by zzehra           ###   ########.fr       */
+/*   Updated: 2025/06/20 02:59:54 by zzehra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,14 +55,17 @@ char *ft_itoa(int n)
     int digit;
     int isngtv;
     char *num;
+    
 
     if (n == -2147483648)
     {
         /*num = malloc (12);
         if (num == NULL)
             return (NULL);
-        return ("-2147483648");*/
-        return ("-2147483648");
+        num = "-2147483648";
+        return (num);*/
+        num = ft_strdup("-2147483648");
+        return (num);
     }
     isngtv = 0;
     num = malloc (ft_digit(n) + 1);
@@ -93,6 +96,6 @@ int main()
         n /= 10;
         i++;
     }
-   printf("%d\n", ft_digit(n));
+   //printf("%d\n", ft_digit(n));
    printf ("%s\n", ft_itoa(-2147483648));
-} */
+}*/

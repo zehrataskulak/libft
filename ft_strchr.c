@@ -6,7 +6,7 @@
 /*   By: zzehra <zzehra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:16:15 by zzehra            #+#    #+#             */
-/*   Updated: 2025/06/18 21:16:16 by zzehra           ###   ########.fr       */
+/*   Updated: 2025/06/20 22:20:43 by zzehra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,31 @@
 
 char *ft_strchr(const char *str, int c)
 {
-    int i;
+    size_t i;
+    unsigned char uc;
 
+    uc = (unsigned char)c;
     i = 0;
-    while (str[i])
+    while (i < ft_strlen(str) + 1)
     {
-        if (str[i] == c)
-            return ((char *)&str[i]);
+        if (str[i] == uc)
+            return ((char *)str + (int)i);
         i++;
     }
-    if (c == '\0')
-        return ((char *)&str[i]);
     return (NULL);
 }
+
+
+/*#include <stdio.h>
+#include <string.h>
+int main()
+{
+
+    char *s = "dftghj";
+    
+    printf("%p\n", ft_strchr(s, 't' + 256)); 
+    printf("%p\n", strchr(s, 't' + 256)); 
+
+
+    return 0;
+}*/
