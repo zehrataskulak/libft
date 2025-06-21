@@ -12,19 +12,18 @@
 
 #include "libft.h"
 
-char *ft_strrchr(const char *str, int c)
+char	*ft_strrchr(const char *str, int c)
 {
-    int size;
-    unsigned char uc;
+	int				size;
+	unsigned char	uc;
 
-    uc = (unsigned char)c;
-    size = (int)ft_strlen(str);
-    while (size >= 0)
-    {
-        if (str[size] == uc)
-            return ((char *)str + size);
-        size--;
-    }
-    return (NULL);
+	uc = (unsigned char)c;
+	size = (int)ft_strlen(str);
+	while (size >= 0)
+	{
+		if (str[size] == uc)
+			return ((char *)str + size);
+		size--;
+	}
+	return (NULL);
 }
-// son gorulen eslesmeyi bulmak icin string i sondan tarayarak ilerlemeyi tercih ettim.

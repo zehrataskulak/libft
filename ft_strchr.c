@@ -12,33 +12,18 @@
 
 #include "libft.h"
 
-char *ft_strchr(const char *str, int c)
+char	*ft_strchr(const char *str, int c)
 {
-    size_t i;
-    unsigned char uc;
+	size_t			i;
+	unsigned char	uc;
 
-    uc = (unsigned char)c;
-    i = 0;
-    while (i < ft_strlen(str) + 1)
-    {
-        if (str[i] == uc)
-            return ((char *)str + (int)i);
-        i++;
-    }
-    return (NULL);
+	uc = (unsigned char)c;
+	i = 0;
+	while (i < ft_strlen(str) + 1)
+	{
+		if (str[i] == uc)
+			return ((char *)str + (int)i);
+		i++;
+	}
+	return (NULL);
 }
-
-
-/*#include <stdio.h>
-#include <string.h>
-int main()
-{
-
-    char *s = "dftghj";
-    
-    printf("%p\n", ft_strchr(s, 't' + 256)); 
-    printf("%p\n", strchr(s, 't' + 256)); 
-
-
-    return 0;
-}*/

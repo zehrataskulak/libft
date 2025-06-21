@@ -10,12 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 int	ft_atoi(const char *str)
 {
-	int num;
-	int sign;
-	int i;
+	int	num;
+	int	sign;
+	int	i;
 
 	num = 0;
 	sign = 1;
@@ -35,10 +34,3 @@ int	ft_atoi(const char *str)
 	}
 	return (num * sign);
 }
-
-
-/*#include <stdio.h>
-int main()
-{
-    printf("%d",ft_atoi("2147483648"));
-}*/
