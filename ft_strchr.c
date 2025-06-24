@@ -6,7 +6,7 @@
 /*   By: ztaskula <ztaskula@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:16:15 by zzehra            #+#    #+#             */
-/*   Updated: 2025/06/24 15:03:05 by ztaskula         ###   ########.fr       */
+/*   Updated: 2025/06/24 18:01:14 by ztaskula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 char	*ft_strchr(const char *str, int c)
 {
-	size_t			i;
+	int			i;
 	int				len;
 	unsigned char	uc;
 
 	uc = (unsigned char)c;
-	len = ft_strlen(str);
+	len = (int)ft_strlen(str);
 	i = 0;
 	while (i < len + 1)
 	{
