@@ -6,7 +6,7 @@
 /*   By: zzehra <zzehra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:17:13 by zzehra            #+#    #+#             */
-/*   Updated: 2025/06/21 00:02:02 by zzehra           ###   ########.fr       */
+/*   Updated: 2025/06/27 16:14:54 by zzehra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char		*arr;
 
 	i = 0;
-	if (start > ft_strlen(s))
+	if (start >= ft_strlen(s))
 	{
 		arr = malloc(1);
 		if (arr == NULL)
