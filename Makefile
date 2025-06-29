@@ -15,6 +15,9 @@ BONUS = ft_lstadd_back_bonus.c ft_lstadd_front_bonus.c ft_lstclear_bonus.c ft_ls
 OBJS = $(SRCS:.c=.o)
 BONUS_OBJ = $(BONUS:.c=.o)
 
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
 all: $(NAME)
 
 $(NAME): $(OBJS)
